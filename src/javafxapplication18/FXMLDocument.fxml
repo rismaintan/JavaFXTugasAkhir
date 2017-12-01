@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication18.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../shutterstock_393753934-1024x682.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="signup" layoutX="528.0" layoutY="14.0" onAction="#btnSignUp" style="-fx-background-color: chocolate;" stylesheets="@first.css" text="Sign Up">
+         <font>
+            <Font name="July Seventh" size="12.0" />
+         </font></JFXButton>
+      <AnchorPane layoutX="404.0" layoutY="63.0" prefHeight="275.0" prefWidth="58.0" style="-fx-background-color: chocolate;" />
+      <AnchorPane layoutX="133.0" layoutY="63.0" prefHeight="275.0" prefWidth="58.0" style="-fx-background-color: chocolate;" />
+      <AnchorPane fx:id="background" layoutX="163.0" layoutY="46.0" prefHeight="309.0" prefWidth="270.0" style="-fx-background-color: orange;" stylesheets="@first.css">
+         <children>
+            <JFXTextField fx:id="username" layoutX="70.0" layoutY="167.0" promptText="username" stylesheets="@first.css" />
+            <ImageView fitHeight="40.0" fitWidth="27.0" layoutX="42.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../if_package_games_rpg_24231.png" />
+               </image>
+            </ImageView>
+            <JFXPasswordField fx:id="password" layoutX="68.0" layoutY="215.0" promptText="password" stylesheets="@first.css" />
+            <ImageView fitHeight="52.0" fitWidth="27.0" layoutX="41.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../if_stock_lock-ok_25467.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="login" layoutX="157.0" layoutY="263.0" onAction="#btnLogIn" style="-fx-background-color: chocolate;" stylesheets="@first.css" text="Log In">
+               <font>
+                  <Font name="July Seventh" size="12.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="100.0" fitWidth="94.0" layoutX="87.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" styleClass="login">
+               <image>
+                  <Image url="@../ice_cream_cup_vanilla.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="138.0" layoutY="20.0" text="Cream">
+               <font>
+                  <Font name="Arial" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" text="Ris'">
+               <font>
+                  <Font name="Forte" size="46.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="remember" layoutX="19.0" layoutY="267.0" mnemonicParsing="false" text="Remember me">
+               <font>
+                  <Font name="July Seventh" size="12.0" />
+               </font></CheckBox>
+         </children>
+      </AnchorPane>
+      <Label layoutX="416.0" layoutY="17.0" text="Belum punya akun?">
+         <font>
+            <Font name="July Seventh" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
