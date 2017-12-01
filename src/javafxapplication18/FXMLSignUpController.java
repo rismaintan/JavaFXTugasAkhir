@@ -69,8 +69,29 @@ try{
     private void SignUp(ActionEvent event) {
         
        try{
-           if(fullname.getText().equals("") || username.getText().equals("") || password.getText().equals("")){
-           JOptionPane.showMessageDialog(null, "Isi datanya yaa!");}
+           
+           if (fullname.getText().equals("")&& username.getText().equals("") && password.getText().equals("") ){
+            JOptionPane.showMessageDialog(null, "Lengkapi Data!");
+           }
+           else if (fullname.getText().equals("") && username.getText().equals("") ){
+            JOptionPane.showMessageDialog(null, "Nama Lengkap dan Username kosong!");
+           }
+            
+            else if (username.getText().equals("") && password.getText().equals("") ){
+            JOptionPane.showMessageDialog(null, "Username dan Password kosong!");
+           }
+             else if (password.getText().equals("") &&fullname.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Password dan Nama Lengkap kosong!");
+           }
+             else if (password.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Password  kosong!");
+           }
+             else if (fullname.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Nama Lengkap kosong!");
+           }
+             else if (username.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Username kosong!");
+           }
            else{
             String sql = "INSERT INTO user (nama_user,username,password) VALUES ('"+fullname.getText()+"',"
                     + "'"+username.getText()+"','"+password.getText()+"')";

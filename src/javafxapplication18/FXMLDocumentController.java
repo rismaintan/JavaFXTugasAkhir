@@ -23,7 +23,9 @@ import javax.swing.JOptionPane;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -47,7 +49,8 @@ public class FXMLDocumentController implements Initializable {
     private Label inPass;
     private Label inUser;
     public String Username, Password;
-
+ @FXML
+    private Button btnCetak2;
     @FXML
     private JFXButton login;
     public String user="user";
@@ -73,12 +76,13 @@ public class FXMLDocumentController implements Initializable {
                 if(username.getText().equals(rs.getString("username")) && password.getText().equals(rs.getString("password"))){
                String nama = rs.getString("nama_user");
             // Hide this current window (if this is what you want)
+            JOptionPane.showMessageDialog(null, "Login Succes");
+          
             ((Node)(event.getSource())).getScene().getWindow().hide();
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("FXMLDocument2.fxml"));
              Scene scene = new Scene(fxmlLoader.load());
              FXMLDocument2Controller fxml2Controller = fxmlLoader.getController();
-          
            fxml2Controller.setnama(nama);
            
             
@@ -88,9 +92,16 @@ public class FXMLDocumentController implements Initializable {
             stage.setTitle("Ice Cream");
             stage.show();
                 }
+              
             }else{
-                    JOptionPane.showMessageDialog(null, "Username dan Password tidak valid");
-                }
+                    
+                if( username.getText().equals("") && password.getText().equals("")){
+        JOptionPane.showMessageDialog(null, "Masukkan Data!");}
+                else if( username.getText().equals("")){
+        JOptionPane.showMessageDialog(null, "Username salah");}
+                else if(password.getText().equals("")){
+                JOptionPane.showMessageDialog(null, "Password salah");
+                }}
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
@@ -120,5 +131,8 @@ try{
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+     @FXML
+    void exit(ActionEvent event) {
+ Platform.exit();
+    }
 }

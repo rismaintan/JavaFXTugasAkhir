@@ -13,6 +13,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -65,7 +67,9 @@ int totalkeseluruhan;
         nama.setText(nam);
         total.setText(ttl);
         hasilPesanan1.setText(menu);
-    
+    nomeja.getText();
+    nama.getText();
+    total.getText();
     }
     @FXML
     void pesanlagi(ActionEvent event) {

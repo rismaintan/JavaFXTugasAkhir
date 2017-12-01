@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication18.FXMLloadController">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../shutterstock_393753934-1024x682.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableuser" layoutX="39.0" layoutY="52.0" prefHeight="200.0" prefWidth="232.0">
+        <columns>
+          <TableColumn fx:id="nomermejaa" prefWidth="75.0" text="No Meja" />
+          <TableColumn fx:id="namapell" prefWidth="75.0" text="Nama" />
+            <TableColumn fx:id="totall" prefWidth="75.0" text="Total Harga" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

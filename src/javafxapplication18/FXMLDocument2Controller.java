@@ -8,6 +8,7 @@ package javafxapplication18;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,6 +36,8 @@ String jeneng;
     private ImageView gambar2;
         @FXML
     private Button buttonmenu;
+         @FXML
+    private Button btnCetak2;
 
     /**
      * Initializes the controller class.
@@ -110,6 +113,10 @@ String tampil="",menu="";
         } catch (IOException e) {
             System.out.println("Failed to create new Window." + e);
         }
+    }
+      @FXML
+    void exit(ActionEvent event) {
+ Platform.exit();
     }
     
 }

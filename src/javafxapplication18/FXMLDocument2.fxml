@@ -56,5 +56,10 @@
          <font>
             <Font name="July Seventh" size="12.0" />
          </font></JFXButton>
+      <JFXButton fx:id="btnCetak2" layoutX="552.0" layoutY="14.0" onAction="#exit" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: chocolate;" text="X">
+         <font>
+            <Font name="July Seventh" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

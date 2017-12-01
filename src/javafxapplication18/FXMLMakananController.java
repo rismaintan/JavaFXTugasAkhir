@@ -182,10 +182,13 @@ FXMLDocumentController tes = new FXMLDocumentController();
         DB.config();
         con = DB.con;
         stat = DB.stm;
-        if(nomeja.getText().equals("")){
-           JOptionPane.showMessageDialog(null, "Data Tidak lengkap!");}
-         else if( nama.getText().equals("")){
-        JOptionPane.showMessageDialog(null, "Isi namanya ya!");
+        if(nomeja.getText().equals("") && nama.getText().equals("")){
+           JOptionPane.showMessageDialog(null, "Masukkan Nomer Meja dan Nama");}
+        else if( nomeja.getText().equals("")){
+        JOptionPane.showMessageDialog(null, "Nomer meja belum terisi !");
+        }
+        else if( nama.getText().equals("")){
+        JOptionPane.showMessageDialog(null, "Nama belum terisi !");
         }
          else{
            ((Node)(event.getSource())).getScene().getWindow().hide();
